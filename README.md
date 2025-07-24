@@ -27,7 +27,7 @@ This is added so people can't take information about others computers with out c
 
 ## Downloads
 
-[![Static Badge](https://img.shields.io/badge/Tuxtility-Full_Release-yellow?style=for-the-badge)](https://github.com/KoffeeJava/Tuxtility/releases/tag/2.2.1)
+If you are looking for a version to modify, please look in to [Tuxtility-Moddable!](https://github.com/X1vova1X/Tuxtility-Moddable)
 
 [![Static Badge](https://img.shields.io/badge/Tuxtility-Nightly-purple?style=for-the-badge)](https://github.com/KoffeeJava/Tuxtility/raw/refs/heads/main/main.js)
 
