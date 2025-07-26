@@ -1,6 +1,6 @@
 /*
-    This is a nightly version and is not made to be used for regular projects.
-    please get the extension via the releases or the discord server, https://discord.gg/JpEQJkyRgX
+    This is a Public Beta Version and is not made to be used for regular projects bus insted for testing.
+    Please get the extension via the releases or the discord server, https://discord.gg/JpEQJkyRgX
     
     Please read the license before modifying and distributing
     https://tinyurl.com/tuxtility
@@ -73,44 +73,9 @@
                         }
                     },
                     {
-                        opcode: 'ALERT',
-                        blockType: Scratch.BlockType.COMMAND,
-                        text: 'Alert [TEXT]',
-                        disableMonitor: true,
-                        arguments: {
-                            TEXT: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'GNU/Linux'
-                            }
-                        }
-                    },
-                    {
-                        opcode: 'PROMPT',
-                        blockType: Scratch.BlockType.REPORTER,
-                        text: 'Prompt [TEXT]',
-                        arguments: {
-                            TEXT: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: "What's your name?"
-                            }
-                        }
-                    },
-                    {
-                        opcode: 'CON',
-                        blockType: Scratch.BlockType.BOOLEAN,
-                        text: 'Comfirm [TEXT]',
-                        disableMonitor: true,
-                        arguments: {
-                            TEXT: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'Linux is the best!'
-                            }
-                        }
-                    },
-                    {
                         opcode: 'WEBU',
                         blockType: Scratch.BlockType.LABEL,
-                        text: 'Website Utilitys',
+                        text: 'Websites',
                         disableMonitor: true,
                     },
                     {
@@ -151,6 +116,38 @@
                         }
                     },
                     {
+                        opcode: 'FETCH',
+                        blockType: Scratch.BlockType.REPORTER,
+                        blockIconURI: inter,
+                        text: 'Fetch [LINK]',
+                        disableMonitor: true,
+                        arguments: {
+                            LINK: {
+                                type: Scratch.ArgumentType.STRING,
+                                defaultValue: 'https://theoldnet.com'
+                            }
+                        },
+                    },
+                    {
+                        opcode: 'NEXT',
+                        blockType: Scratch.BlockType.COMMAND,
+                        blockIconURI: inter,
+                        text: 'Go Forward',
+                        disableMonitor: true
+                    },
+                    {
+                        opcode: 'BACK',
+                        blockType: Scratch.BlockType.COMMAND,
+                        blockIconURI: inter,
+                        text: 'Go Back',
+                        disableMonitor: true
+                    },
+                    {
+                        opcode: 'STORELABEL',
+                        blockType: Scratch.BlockType.LABEL,
+                        text: 'Storage'
+                    },
+                    {
                         opcode: 'STORE',
                         blockType: Scratch.BlockType.COMMAND,
                         text: 'Set localstorage [VAR] to [STUFF]',
@@ -180,11 +177,7 @@
                             }
                         }
                     },
-                         {
-                        opcode: 'GEN',
-                        blockType: Scratch.BlockType.LABEL,
-                        text: 'General Website Utilities',
-                    },
+                    
                     {
                         opcode: 'GET',
                         blockType: Scratch.BlockType.REPORTER,
@@ -198,17 +191,44 @@
                         }
                     },
                     {
-                        opcode: 'FETCH',
-                        blockType: Scratch.BlockType.REPORTER,
-                        blockIconURI: inter,
-                        text: 'Fetch [LINK]',
+                        opcode: 'GEN',
+                        blockType: Scratch.BlockType.LABEL,
+                        text: 'General Website Utilities',
+                    },
+                    {
+                        opcode: 'ALERT',
+                        blockType: Scratch.BlockType.COMMAND,
+                        text: 'Alert [TEXT]',
                         disableMonitor: true,
                         arguments: {
-                            LINK: {
+                            TEXT: {
                                 type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'https://theoldnet.com'
+                                defaultValue: 'GNU/Linux'
                             }
-                        },
+                        }
+                    },
+                    {
+                        opcode: 'PROMPT',
+                        blockType: Scratch.BlockType.REPORTER,
+                        text: 'Prompt [TEXT]',
+                        arguments: {
+                            TEXT: {
+                                type: Scratch.ArgumentType.STRING,
+                                defaultValue: "What's your name?"
+                            }
+                        }
+                    },
+                    {
+                        opcode: 'CON',
+                        blockType: Scratch.BlockType.BOOLEAN,
+                        text: 'Confirm [TEXT]',
+                        disableMonitor: true,
+                        arguments: {
+                            TEXT: {
+                                type: Scratch.ArgumentType.STRING,
+                                defaultValue: 'Linux is the best!'
+                            }
+                        }
                     },
                     {
                         opcode: 'JS',
@@ -222,20 +242,6 @@
                                 defaultValue: 'alert("JS is cool!");'
                             }
                         },
-                    },
-                    {
-                        opcode: 'NEXT',
-                        blockType: Scratch.BlockType.COMMAND,
-                        blockIconURI: inter,
-                        text: 'Go Forward',
-                        disableMonitor: true
-                    },
-                    {
-                        opcode: 'BACK',
-                        blockType: Scratch.BlockType.COMMAND,
-                        blockIconURI: inter,
-                        text: 'Go Back',
-                        disableMonitor: true
                     },
                     {
                         opcode: 'CTT',
@@ -317,7 +323,7 @@
                     {
                         opcode: 'ENCODE',
                         blockType: Scratch.BlockType.LABEL,
-                        text: 'Encoding Utilitys'
+                        text: 'Encoding'
                     },
                     {
                         opcode: 'ENCODEURI',
@@ -337,6 +343,7 @@
                         blockType: Scratch.BlockType.REPORTER,
                         blockIconURI: inter,
                         disableMonitor: true,
+                        hideFromPalette: true,
                         text: "Encode to Hex: [TEXT]",
                         arguments: {
                             TEXT: {
