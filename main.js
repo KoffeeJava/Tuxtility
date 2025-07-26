@@ -524,7 +524,7 @@
             return Scratch.fetch('https://raw.githubusercontent.com/KoffeeJava/Entity-lol/refs/heads/main/secret/Tux.txt').then(response => response.text()).then(text => text).catch(error => alert('An error has occured! \n ' + error, '\n\n Make sure that your internet is on.'))
         }
         THIS() {
-            return "Nightly 3.0"
+            return "Beta 3.0"
         }
     }
     Scratch.extensions.register(new TuxtiltiyJS());
