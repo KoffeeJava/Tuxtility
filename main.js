@@ -1,5 +1,5 @@
 /*
-    This is a Public Beta Version and is not made to be used for regular projects bus insted for testing.
+    This is a Nightly Version and is not made to be used for regular projects bus insted for testing.
     Please get the extension via the releases or the discord server, https://discord.gg/JpEQJkyRgX
     
     Please read the license before modifying and distributing
@@ -25,8 +25,8 @@
     class TuxtiltiyJS {
         getInfo() {
             return {
-                id: 'TUXJS',
-                name: 'Tuxtility',
+                id: 'KoffeeJavaTUXPM',
+                name: 'Tuxtility PME',
                 blockIconURI: tux,
                 color1: '#ebba13',
                 color2: '#c79c02',
@@ -75,7 +75,7 @@
                     {
                         opcode: 'WEBU',
                         blockType: Scratch.BlockType.LABEL,
-                        text: 'Websites',
+                        text: 'Website Redirects',
                         disableMonitor: true,
                     },
                     {
@@ -116,19 +116,6 @@
                         }
                     },
                     {
-                        opcode: 'FETCH',
-                        blockType: Scratch.BlockType.REPORTER,
-                        blockIconURI: inter,
-                        text: 'Fetch [LINK]',
-                        disableMonitor: true,
-                        arguments: {
-                            LINK: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'https://theoldnet.com'
-                            }
-                        },
-                    },
-                    {
                         opcode: 'NEXT',
                         blockType: Scratch.BlockType.COMMAND,
                         blockIconURI: inter,
@@ -141,54 +128,6 @@
                         blockIconURI: inter,
                         text: 'Go Back',
                         disableMonitor: true
-                    },
-                    {
-                        opcode: 'STORELABEL',
-                        blockType: Scratch.BlockType.LABEL,
-                        text: 'Storage'
-                    },
-                    {
-                        opcode: 'STORE',
-                        blockType: Scratch.BlockType.COMMAND,
-                        text: 'Set localstorage [VAR] to [STUFF]',
-                        blockIconURI: store,
-                        disableMonitor: true,
-                        arguments: {
-                            VAR: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'Terminal'
-                            },
-                            STUFF: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'sudo pacman -S Tuxtility'
-                            }
-                        }
-                    },
-                    {
-                        opcode: 'DELSTORE',
-                        blockType: Scratch.BlockType.COMMAND,
-                        blockIconURI: store,
-                        text: 'Delete [VAR]',
-                        disableMonitor: true,
-                        arguments: {
-                            VAR: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'Terminal'
-                            }
-                        }
-                    },
-                    
-                    {
-                        opcode: 'GET',
-                        blockType: Scratch.BlockType.REPORTER,
-                        blockIconURI: store,
-                        text: 'Get [VAR]',
-                        arguments: {
-                            VAR: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'Terminal'
-                            }
-                        }
                     },
                     {
                         opcode: 'GEN',
@@ -231,17 +170,16 @@
                         }
                     },
                     {
-                        opcode: 'JS',
-                        blockType: Scratch.BlockType.COMMAND,
-                        blockIconURI: js,
-                        text: 'Run [TEXT]',
+                        opcode: 'ISON',
+                        blockType: Scratch.BlockType.BOOLEAN,
+                        blockIconURI: inter,
+                        text: "Is User Online?",
                         disableMonitor: true,
-                        arguments: {
-                            TEXT: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'alert("JS is cool!");'
-                            }
-                        },
+                    },
+                    {
+                        opcode: 'TABINFO',
+                        blockType: Scratch.BlockType.LABEL,
+                        text: 'Tab Info',
                     },
                     {
                         opcode: 'CTT',
@@ -269,28 +207,16 @@
                         }
                     },
                     {
-                        opcode: 'LOGTX',
-                        blockType: Scratch.BlockType.COMMAND,
-                        blockIconURI: inter,
-                        text: '[LOGTX] [TEXT]',
-                        disableMonitor: true,
-                        arguments: {
-                            LOGTX: {
-                                type: Scratch.ArgumentType.STRING,
-                                menu: 'LOGTX'
-                            },
-                            TEXT: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'Hello World!'
-                            }
-                        },
-                    },
-                    {
                         opcode: 'CURTITLE',
                         blockType: Scratch.BlockType.REPORTER,
                         blockIconURI: inter,
                         text: 'Current Title',
                         disableMonitor: true
+                    },
+                    {
+                        opcode: 'BROINFO',
+                        blockType: Scratch.BlockType.LABEL,
+                        text: 'Computer Info',
                     },
                     {
                         opcode: 'WHATOS',
@@ -312,63 +238,7 @@
                         blockIconURI: inter,
                         disableMonitor: true,
                         text: "Browser's Languge"
-                    },
-                    {
-                        opcode: 'ISON',
-                        blockType: Scratch.BlockType.BOOLEAN,
-                        blockIconURI: inter,
-                        text: "Online?",
-                        disableMonitor: true,
-                    },
-                    {
-                        opcode: 'ENCODE',
-                        blockType: Scratch.BlockType.LABEL,
-                        text: 'Encoding'
-                    },
-                    {
-                        opcode: 'ENCODEURI',
-                        blockType: Scratch.BlockType.REPORTER,
-                        blockIconURI: inter,
-                        disableMonitor: true,
-                        text: "Encode to data:URI: [TEXT]",
-                        arguments: {
-                            TEXT: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'Hello World!'
-                            },
-                        },
-                    },
-                    {
-                        opcode: 'ENCODEHEX',
-                        blockType: Scratch.BlockType.REPORTER,
-                        blockIconURI: inter,
-                        disableMonitor: true,
-                        hideFromPalette: true,
-                        text: "Encode to Hex: [TEXT]",
-                        arguments: {
-                            TEXT: {
-                                type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'Hello World!'
-                            },
-                        },
-                    },
-                    {
-                        opcode: 'EXTEN',
-                        blockType: Scratch.BlockType.LABEL,
-                        text: 'Extension Stuff'
-                    },
-                    {
-                        opcode: 'LATE',
-                        blockType: Scratch.BlockType.REPORTER,
-                        text: 'Latest Version out',
-                        disableMonitor: true
-                    },
-                    {
-                        opcode: 'THIS',
-                        blockType: Scratch.BlockType.REPORTER,
-                        text: "This Extension's Version",
-                        disableMonitor: true
-                    },
+                    }
                 ],
                 menus: {
                     REDER: {
@@ -524,7 +394,7 @@
             return Scratch.fetch('https://raw.githubusercontent.com/KoffeeJava/Entity-lol/refs/heads/main/secret/Tux.txt').then(response => response.text()).then(text => text).catch(error => alert('An error has occured! \n ' + error, '\n\n Make sure that your internet is on.'))
         }
         THIS() {
-            return "Beta 3.0"
+            return "Nightly 3.0"
         }
     }
     Scratch.extensions.register(new TuxtiltiyJS());
