@@ -140,7 +140,7 @@
                         arguments: {
                             TEXT: {
                                 type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'Tuxtility'
+                                defaultValue: 'Webcat!'
                             }
                         }
                     },
@@ -153,7 +153,7 @@
                         arguments: {
                             FAVI: {
                                 type: Scratch.ArgumentType.STRING,
-                                defaultValue: 'https://tinyurl.com/util-tux'
+                                defaultValue: 'https://tinyurl.com/WebCat-Ext'
                             }
                         }
                     },
